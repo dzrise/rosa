@@ -1,0 +1,55 @@
+.input {
+  margin: 0;
+  position: relative;
+
+  &__label {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__field {
+    display: flex;
+    align-items: center;
+    outline: none;
+    border: 1px solid #ced4da;;
+    background-color: #ffffff !important;
+
+    &--error {
+      border-color: #dc3545;
+    }
+
+    &--success {
+      border-color: #0acd75
+    }
+  }
+
+  &__errors {
+    /*    position: absolute;
+        bottom: -10px;*/
+    font-size: 12px;
+    font-weight: 600;
+    color: #dc3545;
+
+    & > * {
+      margin: 0;
+    }
+  }
+
+  &--cross {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 100%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}

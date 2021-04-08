@@ -1,0 +1,16 @@
+version: '2.1'
+
+services:
+  backoffice:
+    image: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.backoffice.rule=Host(`rosakhutor-backoffice.dreamdev.space`)"
+      - "traefik.http.routers.backoffice.entrypoints=web"
+    networks:
+      - traefik
+
+networks:
+  traefik:
+    external:
+      name: traefik
